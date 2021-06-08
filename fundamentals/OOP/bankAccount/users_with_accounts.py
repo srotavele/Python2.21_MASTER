@@ -26,6 +26,10 @@ class User:
          self.name = name
          self.email = email_address
          self.account = BankAccount(int_rate = 1.02, balance = 0)
+         
+    # def new_account(self, int_rate = 0.02, balance = 0):
+    #     new_acct = BankAccount(int_rate, balance)
+    #     self.account.append(new_acct)
 
     def make_deposit(self, amount):
          self.account.deposit(amount)
@@ -35,38 +39,47 @@ class User:
          self.account.withdrawl(amount)
          return self
 
-    def display_user_balance(self, name):
+    def display_user_balance(self,):
          print (f"User: {self.name}, Balance: {self.account.balance}")
          return self
 
-#     def transfer_money(self, other_user, amount):
-#          self.balance(amount)
-#          other_user.balance(amount)
-#          return self
+    def transfer_money(self, other_user, amount):
+         self.account.withdrawl(amount)
+         other_user.account.deposit(amount)
+         return self
 
 
 guido = User("Guido van Rossum", "guido@python.com")
 monty = User("Monty Python", "monty@python.com")
 karl = User("Karl Oatmeal", "karl@oatmeal.com")
+# karl.new_account(0.02,1500)
+# karl.new_account(0.02, 2500)
 print(guido.name)
 print(monty.name)
 print(karl.name)
 
 
-guido.make_deposit(1000).make_deposit(200).make_deposit(500).make_withdrawl(50)
+guido.make_deposit(1000).make_deposit(200).make_deposit(500).make_withdrawl(50).display_user_balance()
 
-monty.make_deposit(50).make_deposit(250).make_withdrawl(75).make_withdrawl(100).display_user_balance(User)
+monty.make_deposit(50).make_deposit(250).make_withdrawl(75).make_withdrawl(100).display_user_balance()
 
-karl.make_deposit(5000).make_withdrawl(100).make_withdrawl(100).make_withdrawl(100)
+karl.make_deposit(5000).make_withdrawl(100).make_withdrawl(100).make_withdrawl(100).display_user_balance()
 
 print(f"Guido's dough = {guido.account.balance}")
 print(f"Monty's dough = {monty.account.balance}")
 print(f"Karl's dough = {karl.account.balance}")
 
-# guido.transfer_money(karl,150)
+guido.transfer_money(karl,200)
 
 print(f"Guido's dough = {guido.account.balance}")
 print(f"Karl's dough = {karl.account.balance} -Thanks, Guido!!")
 
 
+#     @classmethod
+#     def all_balances(cls):
+#         sum = 0
+#         for account in cls.all_accounts:
+#         sum += account.balance
+#         return sum
 
+# print(BankAccount.all_accounts())
