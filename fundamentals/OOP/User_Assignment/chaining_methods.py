@@ -1,24 +1,25 @@
 #!/Library/Frameworks/Python.framework/Versions/3.9/bin/python3
+
 class User:
     def __init__(self, name, email_address):
          self.name = name
          self.email = email_address
-         self.account_balance = 0
+         self.account = BankAccount(int_rate = 1.02, balance = 500)
 
     def make_deposit(self, amount):
-         self.account_balance += amount
+         self.account.deposit += amount
          return self
 
     def make_withdrawl(self, amount):
-         self.account_balance -= amount
+         self.account.withdrawl -= amount
          return self
 
     def display_user_balance(self, name):
-         print (f"User: {self.name}, Balance: {self.account_balance}")
+         print (f"User: {self.name}, Balance: {self.account.balance}")
          return self
 
     def transfer_money(self, other_user, amount):
-         self.account_balance -= amount
+         self.balance -= amount
          other_user.account_balance += amount
          return self
 
@@ -37,11 +38,14 @@ monty.make_deposit(50).make_deposit(250).make_withdrawl(75).make_withdrawl(100).
 
 karl.make_deposit(500).make_withdrawl(100).make_withdrawl(100).make_withdrawl(100)
 
-print(f"Guido's dough = {guido.account_balance}")
-print(f"Monty's dough = {monty.account_balance}")
-print(f"Karl's dough = {karl.account_balance}")
+print(f"Guido's dough = {guido.account.balance}")
+print(f"Monty's dough = {monty.account.balance}")
+print(f"Karl's dough = {karl.account.balance}")
 
 guido.transfer_money(karl,100)
 
-print(f"Guido's dough = {guido.account_balance}")
-print(f"Karl's dough = {karl.account_balance} -Thanks, Guido!!")
+print(f"Guido's dough = {guido.account.balance}")
+print(f"Karl's dough = {karl.account.balance} -Thanks, Guido!!")
+
+
+
