@@ -1,7 +1,7 @@
 class BankAccount:
     bank_name = "Second Rate Bank"
     all_accounts = []
-    def __init__(self, int_rate=0.02, balance=500):
+    def __init__(self, int_rate=1.02, balance=500):
         self.int_rate = int_rate
         self.balance = balance
         BankAccount.all_accounts.append(self)
