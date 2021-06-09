@@ -1,6 +1,6 @@
 #!/Library/Frameworks/Python.framework/Versions/3.9/bin/python3
 class Pet:
-    def __init__(self, name, types, tricks, health = 50, energy = 50):
+    def __init__(self, name, types, tricks, health=50, energy=50):
         self.name = name
         self.type = types
         self.tricks = tricks
@@ -21,7 +21,7 @@ class Pet:
         return self
 
     def noise(self):
-        print("Meow, hisssss!!!")
+        print("Meow")
 
     def display_health(self):
         print(self.name, "Health =", self.health)
@@ -30,3 +30,11 @@ class Pet:
     def display_energy(self):
         print(self.name, "Energy =", self.energy)
         return self
+
+
+class AngryCat(Pet):
+    def __init__(self, name, types, tricks, health=50, energy=50):
+        super().__init__(name, types, tricks, health=50, energy=50)
+
+    def noise(self):
+        print("Hissssssssssss!!!!!")

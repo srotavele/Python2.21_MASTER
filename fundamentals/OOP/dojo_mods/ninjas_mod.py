@@ -8,14 +8,14 @@ class Ninja:
 
     def walk(self):
         self.pet.play()
-        print(f"{self.name} is taking {pet_1.name} for a walk ")
+        print(f"{self.name} is taking {self.pet.name} for a walk ")
         return self
 
     def feed(self):
         self.pet.eat()
-        print(f"{self.name} is feeding {pet_1.name} dinner")
+        print(f"{self.name} is feeding {self.pet.name} dinner")
         return self
 
-    def bathe (self):
+    def bathe(self):
         self.pet.noise()
-        print(f"{self.name} is giving {pet_1.name} a bath")
+        print(f"{self.name} is giving {self.pet.name} a bath")
