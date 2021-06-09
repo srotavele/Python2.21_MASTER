@@ -46,9 +46,11 @@ class Pet:
 
     def display_health(self):
         print(self.name, "Health =", self.health)
+        return self
 
     def display_energy(self):
         print(self.name, "Energy =", self.energy)
+        return self
 
 pet_1 = Pet("Norma","Kitty","purrs")
 print(pet_1.name)
