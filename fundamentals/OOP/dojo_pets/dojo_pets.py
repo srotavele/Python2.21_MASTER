@@ -1,45 +1,60 @@
 #!/Library/Frameworks/Python.framework/Versions/3.9/bin/python3
-
 class Ninja:
-    def __init__(first_name, last_name, treats, pet_food, pet):
-        self.first_name = first_name
-        self.last_name = last_name
+    def __init__(self, name, treats, pet_food, pet):
+        self.name = name
         self.treats = treats
         self.pet_food = pet_food
-        self.pet = Pet(name, types, tricks, health = 0, energy = 0)
-    
+        self.pet = pet
+
     def walk(self):
-        pass
-    
+        self.pet.play()
+        print(f"{self.name} is taking {pet_1.name} for a walk ")
+        return self
+
     def feed(self):
-        pass
-    
+        self.pet.eat()
+        print(f"{self.name} is feeding {pet_1.name} dinner")
+        return self
+
     def bathe (self):
-        pass
-    
-    
-ninja_1 = Ninja( "Radar", "Bob","caviar","Kibbles_n_Bits",)
-print(ninja_1.name)
-    
-    
+        self.pet.noise()
+        print(f"{self.name} is giving {pet_1.name} a bath")
+
 class Pet:
-    def __init__(name, types, tricks, health = 0, energy = 0):
+    def __init__(self, name, types, tricks, health = 50, energy = 50):
         self.name = name
         self.type = types
         self.tricks = tricks
-    
+        self.health = health
+        self.energy = energy
+
     def sleep(self):
-        self.energy +20
-    
+        self.energy += 20
+        return self
+
     def eat(self):
-        self.health +10
-        self.energy +5 
-    
+        self.health += 10
+        self.energy += 5
+        return self
+
     def play(self):
-        self.health  +5
-    
+        self.health += 5
+        return self
+
     def noise(self):
         print("Meow, hisssss!!!")
-        
-pet_1 = Pet("Norma","kitty", "maul",)
+
+    def display_health(self):
+        print(self.name, "Health =", self.health)
+
+    def display_energy(self):
+        print(self.name, "Energy =", self.energy)
+
+pet_1 = Pet("Norma","Kitty","purrs")
 print(pet_1.name)
+
+ninja_1 = Ninja("Radar Bob","mice","salad",pet_1)
+print(ninja_1.name)
+
+ninja_1.walk().feed().bathe()
+pet_1.eat().play().sleep().display_energy().display_health()
