@@ -38,3 +38,16 @@ class AngryCat(Pet):
 
     def noise(self):
         print("Hissssssssssss!!!!!")
+
+
+class SleepyCat(AngryCat):
+    def __init__(self, name, types, tricks, health=50, energy=50):
+        super().__init__(name, types, tricks, health=50, energy=50)
+
+    def sleep(self):
+        self.health += 30
+        self.energy += 30
+        return self
+
+    def noise(self):
+        print("purrrrrr")
