@@ -2,8 +2,8 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route('/play/')
-def blue_boxes(num = 3, color = "blue"):
-    return render_template('index.html_2',num = 3, color = "blue")
+def blue_boxes():
+    return render_template('index.html')
 
 @app.route('/play/<int:num>')
 def num_boxes(num):
