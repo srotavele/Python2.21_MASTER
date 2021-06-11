@@ -8,25 +8,15 @@
     <title>Checkerboard</title>
     <link rel="stylesheet" href="{{ url_for('static',filename = 'style.css') }}">
 </head>
+
 <body>
     <table>
-    {% for i in range(8): %}
-        <tr>
-            {% for j in range(8): %}
-            <td class='color_{{ (i+j)%2+1 }}'></td>
-            {% endfor %}
-        </tr>
-        
-    {% endfor %}
-    </table>
-    <table>
-        {% for i in range(x): %}
+    {% for i in range(x): %}
         <tr>
             {% for j in range(y): %}
             <td class='color_{{ (i+j)%2+1 }}'></td>
             {% endfor %}
         </tr>
-        
     {% endfor %}
     </table>
 </body>
