@@ -1,0 +1,23 @@
+@import "./reset.css";
+
+.h1 {
+  text-align: center;
+}
+
+.main_content {
+  margin-left: 25%;
+  margin-right: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.blue_boxes {
+  background-color: rgb(113, 210, 255);
+  height: 200px;
+  width: 200px;
+  margin: 5px;
+  outline: solid, 2px, black;
+}
