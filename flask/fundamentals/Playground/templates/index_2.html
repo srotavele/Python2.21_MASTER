@@ -1,45 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>assignment_playground</title>
-    
-</head>
-<style>
-h1{
-  text-align: center;
-}
-.main_content {
-  margin-left: 25%;
-  margin-right: 25%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex-wrap: wrap;
-}
-.blue_boxes {
-  /* background-color: coral; */
-  height: 200px;
-  width: 200px;
-  margin: 5px;
-  border: solid;
-
-
-}
-</style>
-<body>
+  </head>
+  <style>
+    h1 {
+      text-align: center;
+    }
+    .main_content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-wrap: wrap;
+    }
+    .blue_boxes {
+      background-color:{{ color }};
+      height: 150px;
+      width: 150px;
+      margin: 5px;
+      border: solid;
+    }
+  </style>
+  <body>
     <h1>Welcome!!</h1>
     <div class="main_content">
-        {% for x in range(0,times): %}
-            <div class="blue_boxes"></div>
-        {% endfor %}
-        
+      {% for x in range(0,times): %}
+      <div class="blue_boxes"></div>
+      {% endfor %}
     </div>
-</body>
+  </body>
 </html>
-
-
-

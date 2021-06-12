@@ -3,15 +3,15 @@ app = Flask(__name__)
 
 @app.route('/')
 def base():
-    return render_template('index.html', x = 8, y = 8)
+    return render_template('index.html', x = 8, y = 8, color_1 = "black", color_2 = "red")
 
 @app.route('/<int:x>')
 def base_row1(x):
-    return render_template('index.html', x = x, y = 8)
+    return render_template('index.html', x = x, y = 8, color_1 = "black", color_2 = "red")
 
 @app.route('/<int:x>/<int:y>')
 def base_row2(x,y):
-    return render_template('index.html', x = x, y = y )
+    return render_template('index.html', x = x, y = y, color_1 = "black", color_2 = "red" )
 
 
 @app.route('/<int:x>/<int:y>/<color1>/<color2>')

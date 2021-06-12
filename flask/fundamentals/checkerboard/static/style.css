@@ -3,9 +3,9 @@ table tr td {
   height: 50px;
 }
 .color_1 {
-  background-color: red;
+  background-color: {{color1}};
 }
 
 .color_2 {
-  background-color: black;
+  background-color: {{color2}};
 }
