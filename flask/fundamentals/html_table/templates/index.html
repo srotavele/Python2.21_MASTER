@@ -16,11 +16,11 @@
                 <th>Last Name</th>
                 <th>Full Name</th>
             </tr>
-            {% for dict in users %}
+            {% for gumball in users %}
             <tr>
-                <th>{{ dict['first_name'] }}</th>
-                <th>{{ dict['last_name'] }}</th>
-                <th>{{ dict['first_name'] }} {{ dict['last_name'] }}</th>
+                <th>{{ gumball['first_name'] }}</th>
+                <th>{{ gumball['last_name'] }}</th>
+                <th>{{ gumball['first_name'] }} {{ gumball['last_name'] }}</th>
             </tr>
             {% endfor %}
         </table>
