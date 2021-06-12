@@ -1,0 +1,10 @@
+.container {
+  height: 250px;
+  width: 250px;
+  border: solid;
+  align-content: center;
+  justify-content: center;
+  margin: 50px;
+  padding: 10px;
+  display: inline-block;
+}
