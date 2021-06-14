@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'style.css') }}">
+
+    <title>Counter</title>
+</head>
+<body>
+    <div class="container">
+        <div class="forms">
+            <form action="/visits" method='post'>
+                    <h1>Counter</h1>
+                    <h2>  You've been here {{session['count']}} times</h2>
+                    <button class="buttons">Add 3</button>
+            </form>
+            <form action="/reset" method='post'>
+                <button class="buttons">reset</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

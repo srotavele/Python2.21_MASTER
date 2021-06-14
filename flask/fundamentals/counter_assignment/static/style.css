@@ -1,0 +1,14 @@
+.container {
+  background: ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.buttons {
+  background: burlywood;
+  margin-top: 5px;
+  border-radius: 3px;
+}
